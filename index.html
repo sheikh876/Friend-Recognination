@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: blue;
+    }
+    button { 
+           background-color: #4CAF50; 
+           width: 100%;
+            color: green; 
+            padding: 15px; 
+            margin: 10px 0px; 
+            border: none; 
+            cursor: pointer; 
+             } 
+     form { 
+            border: 3px solid #f1f1f1; 
+        } 
+     input[type=text], input[type=number] { 
+            width: 100%; 
+            margin: 8px 0;
+            padding: 12px 20px; 
+            display: inline-block; 
+            border: 2px solid green; 
+            box-sizing: border-box; 
+        }
+      
+     button:hover { 
+            opacity: 0.7; 
+        } 
+     
+   #result {
+    width: 100%; 
+    color: white; 
+    margin: 8px 0;
+            padding: 12px 20px; 
+            display: inline-block; 
+            border: 2px solid yellow; 
+            background-color: lightblue;
+            box-sizing: border-box; 
+   }    
+       
+     .container { 
+            padding: 25px; 
+            background-color: lightblue;
+        } 
+    </style> 
+<body>
+    <form onsubmit="findAfriend(); return false">
+        <div class="conatainer">
+        <input type="text" id="name" placeholder="Enter">
+        <br><br>
+            
+         <button onclick="findAfriend()">Check List</button>
+        </div>
+        </form>
+        <h1 id="result"></h1>
+        <script>
+            function findAfriend(){
+                let name= document.querySelector("#name").value
+                switch (name){
+                    case "liena":
+                    case "mei xing": 
+                            case "hanna": 
+                            case "xiaoli" :
+                document.querySelector("#result").innerHTML=`I know ${name}`;
+                break;
+                default:
+                    document.querySelector("#result").innerHTML=`I don't know ${name}`;
+                }
+            }
+            </script> 
+</body>
+</html>
